@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Ubuntu&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link  id="favicon" href="https://lh3.googleusercontent.com/tqcenSkpYENIYzQUyc0H-d5ncctV55lUmmPa5-RpUPscK2f7mTNFUGqEqKqs2rocYRaE_w=s85" SameSite="None" rel="shortcut icon" type="image/x-icon"  />
 
-    <script src="./scripts/script.js"></script>
   </head>
 
   <body>
@@ -25,8 +24,8 @@
     <div id="boards">
       <div class="board">
         <header class="allHea">TODO</header>
-        <ul class="kanban-field" id="here1">
-          <li draggable="true" type="checkbox" name="conc" id="conc">
+        <ul class="kanban-field" id="todo">
+          <li draggable="true" type="checkbox" class="item">
             <div class="type green"></div>
             <div class="content">Isso é um todo</div>
           </li>
@@ -36,17 +35,18 @@
       <div class="board">
         <header class="allHea">DOING</header>
 
-        <ul class="kanban-field" id="here2"></ul>
+        <ul class="kanban-field" id="doing"></ul>
       </div>
 
       <div class="board">
         <header class="allHea">DONE</header>
 
-        <ul class="kanban-field" id="here3"></ul>
+        <ul class="kanban-field" id="done"></ul>
       </div>
 
     </div>
 
     <script src="./script/index.js"></script>
+    <script src="./script/dragAndDrop.js"></script>
   </body>
 </html>
