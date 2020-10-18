@@ -9,19 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Ubuntu&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link  id="favicon" href="https://lh3.googleusercontent.com/tqcenSkpYENIYzQUyc0H-d5ncctV55lUmmPa5-RpUPscK2f7mTNFUGqEqKqs2rocYRaE_w=s85" SameSite="None" rel="shortcut icon" type="image/x-icon"  />
 
+    <script src="https://kit.fontawesome.com/78a56a5c1c.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <header id="he1">
+    <header id="title">
       <h1>Kanbana</h1>
+      <nav>
+        <a href="#create-item"><i class="fas fa-plus"></i></a>
+      </nav>
     </header>
-
-    <div class="createTodo">
-      <input type="text" id="myTodo" placeholder="TODO" />
-      <button type="submit" name="send" id="send">Send</button>
-    </div>
-
-    <div id="boards">
+    <div id="boards" contextmenu="mycontext">
       <div class="board">
         <header class="allHea">TODO</header>
         <ul class="kanban-field" id="todo">
@@ -45,6 +43,25 @@
       </div>
 
     </div>
+
+    <div id="create-item" class="modalCreate">
+      <div class="content">
+        <a href="#" class="close"><i class="fas fa-times"></i></a>
+        <h1 class="modal-title">Crie um novo item</h1>
+        <form class="createItem" onsubmit="handleSubmit" >
+          <input name="item" type="text" required placeholder="Entre um item"/>
+          <input name="label" list="labels" type="text">
+          <datalist id="labels" >
+            <option value="green">
+            <option value="blue">
+            <option value="black">
+          </datalist>
+          <button type="submit">Criar</button>
+        </form>
+      </div>
+    </div>
+
+    
 
     <script src="./script/index.js"></script>
     <script src="./script/dragAndDrop.js"></script>

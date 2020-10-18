@@ -5,12 +5,12 @@ const dropzones = document.querySelectorAll(".kanban-field");
 items.forEach(item => {
     item.addEventListener("dragstart", dragstart);
     item.addEventListener("dragend", dragend);
-})
 
+    /*item.addEventListener("touchmove", dragstart);
+    item.addEventListener("touchend", dragend);*/
+})
 function dragstart() {
     dropzones.forEach( dropzone => dropzone.classList.add("highlight"));
-
-    log(this)
 
     this.classList.add("is-dragging");
 }
