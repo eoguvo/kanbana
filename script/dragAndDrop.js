@@ -1,14 +1,17 @@
-const items = document.querySelectorAll(".item");
 const dropzones = document.querySelectorAll(".kanban-field");
 
 /*   handle drag items   */
-items.forEach(item => {
-    item.addEventListener("dragstart", dragstart);
-    item.addEventListener("dragend", dragend);
+const getItems = () => {
+    let items = document.querySelectorAll(".item");
+    items.forEach(item => {
+        item.addEventListener("dragstart", dragstart);
+        item.addEventListener("dragend", dragend);
+    })
+}
 
-    /*item.addEventListener("touchmove", dragstart);
-    item.addEventListener("touchend", dragend);*/
-})
+getItems()
+
+
 function dragstart() {
     dropzones.forEach( dropzone => dropzone.classList.add("highlight"));
 

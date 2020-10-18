@@ -75,15 +75,18 @@ nav i {
   transition: all .2s;
 }
 
-.kanban-field li {
+.kanban-field .item {
   text-align: center;
   background: #fff;
-  height: 40px;
+  height: 64px;
   line-height: 40px;
   border-bottom: 3px solid var(--main);
   transition: all .2s;
   position: relative;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .kanban-field li:hover {
@@ -111,7 +114,6 @@ nav i {
   width: 16px;
   height: 4px;
   border-radius: 99999px;
-  background-color: red;
   position: absolute;
   top: 8px;
   left: 15px;
@@ -178,6 +180,14 @@ nav i {
   border: 1px solid black;
   text-align: center;
   border-radius: 0 0 4px 4px;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+.createItem datalist {
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
 }
 .createItem input[name="item"] {
   border-bottom: 1px solid black;
@@ -191,6 +201,11 @@ nav i {
   border: none;
   height: 32px;
   background-color: var(--main);
+  transition: all .2s;
+  cursor: pointer;
+}
+.createItem button:hover {
+  background-color: #f09703;
 }
 @media (max-width: 770px) {
   #title {
