@@ -29,8 +29,12 @@ const handleSubmit = e => {
     textEl.setAttribute("class", "content");
     textEl.appendChild(document.createTextNode(item));
 
+    const trashEl = document.createElement("i");
+    trashEl.setAttribute("class", "fas fa-trash");
+
     listEl.appendChild(labelEl);
     listEl.appendChild(textEl);
+    listEl.appendChild(trashEl);
 
     document.querySelector("#todo").appendChild(listEl);
     

@@ -2,15 +2,22 @@ const dropzones = document.querySelectorAll(".kanban-field");
 
 /*   handle drag items   */
 const getItems = () => {
-    let items = document.querySelectorAll(".item");
+    const items = document.querySelectorAll(".item");
     items.forEach(item => {
         item.addEventListener("dragstart", dragstart);
         item.addEventListener("dragend", dragend);
+    })
+    const trashcans = document.querySelectorAll(".fa-trash");
+    trashcans.forEach(trash => {
+        trash.addEventListener("click", removeElement);
     })
 }
 
 getItems()
 
+function removeElement() {
+    this.parentNode.parentNode.removeChild(this.parentNode);
+}
 
 function dragstart() {
     dropzones.forEach( dropzone => dropzone.classList.add("highlight"));
@@ -31,9 +38,7 @@ dropzones.forEach( dropzone => {
     dropzone.addEventListener('drop', drop)
 })
 
-/*   NOTES: 
-* this = dropzone
-*/
+//   NOTES: this = dropzone
 
 function dragover() {
     this.classList.add('over')

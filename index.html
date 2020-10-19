@@ -26,6 +26,7 @@
           <li draggable="true" type="checkbox" class="item">
             <div class="type green"></div>
             <div class="content">Isso é um todo</div>
+            <i class="fas fa-trash"></i>
           </li>
         </ulul>
       </div>
@@ -49,7 +50,7 @@
         <a href="#" class="close"><i class="fas fa-times"></i></a>
         <h1 class="modal-title">Crie um novo item</h1>
         <form class="createItem" >
-          <input class="item" name="item" type="text" required placeholder="Entre um item"/>
+          <input class="item" name="item" type="text" required placeholder="Entre um item" autocomplete="off"  />
           <input class="label" name="label" list="labels" type="text">
           <datalist id="labels" >
             <option value="green">

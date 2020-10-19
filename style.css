@@ -98,6 +98,21 @@ nav i {
   margin-top: .5rem;
 }
 
+.fa-trash {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  right: 6px;
+  top: 6px;
+  opacity: 0;
+  transition: all .2s;
+  color: red;
+}
+.item:hover .fa-trash {
+  display: flex;
+  opacity: 1;
+}
+
 .highlight {
   background-color: var(--light);
 }
